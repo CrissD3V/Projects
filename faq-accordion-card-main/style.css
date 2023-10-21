@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root {
+    /** Colores Primarios */
+    /* Texto */
+    --Very-dark-desaturated-blue: hsl(238, 29%, 16%);
+    --Soft-red: hsl(14, 88%, 65%);
+
+    /* Degradado del background */
+    --Soft-violet: hsl(273, 75%, 66%);
+    --Soft-blue: hsl(240, 73%, 65%);
+
+    /** Colores Neutrales */
+    /* Texto */
+    --Very-dark-grayish-blue: hsl(237, 12%, 33%);
+    --Dark-grayish-blue: hsl(240, 6%, 50%);
+
+    /* Divisores */
+    --Light-grayish-blue: hsl(240, 5%, 91%);
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(180deg, var(--Soft-violet), var(--Soft-blue));
+    font-family: 'Kumbh Sans', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background: white;
+    border-radius: 20px;
+    width: 900px;
+    height: 500px;
+    display: flex;
+    box-shadow: 0 20px 30px rgba(0, 0, 0, .3);
+}
+
+.image {
+    width: 50%;
+    overflow: hidden;
+    position: relative;
+}
+
+#woman {
+    position: absolute;
+    bottom: 80px;
+    left: -80px;
+    z-index: 1;
+}
+
+#image-bg-mobile {
+    display: none;
+}
+
+#image-bg {
+    position: absolute;
+    left: -590px;
+    bottom: -140px;
+}
+
+#box {
+    position: absolute;
+    margin-top: 80px;
+    margin-right: 892px;
+    filter: drop-shadow(0 14px 15px rgba(0, 0, 0, .3));
+    z-index: 2;
+}
+
+.faq {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    position: relative;
+}
+
+.faq h1 {
+    position: absolute;
+    top: 60px;
+    left: 20px;
+    font-size: 35px;
+    color: var(--Very-dark-desaturated-blue);
+}
+
+.questions{ 
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    left: 20px;
+    bottom: 60px;
+}
+
+.question-box {
+    width: 350px;
+    border-bottom: 1px solid var(--Light-grayish-blue);
+    padding: 0 0 15px;
+    color: var(--Very-dark-grayish-blue);
+    position: relative;
+}
+
+.question {
+    transition: .3s;
+}
+
+.arrow {
+    position: absolute;
+    right: 0;
+    top: 40%;
+    transition: .4s;
+}
+
+.answer {
+    display: none;
+}
+
+.question:hover {
+    cursor: pointer;
+    color: var(--Soft-red);
+}
+
+[type="checkbox"] {
+    display: none;
+}
+
+[type="checkbox"]:checked ~ .arrow {
+    top: 5px;
+    transform: rotate(180deg);
+}
+
+[type="checkbox"]:checked ~ .answer {
+    display: block;
+    width: 100%;
+    font-size: 12px;
+    color: var(--Dark-grayish-blue);
+    margin-top: 10px;
+}
+
+[type="checkbox"]:checked + .question {
+    font-weight: 700;
+}
+
+.attribution {
+    position: absolute;
+    bottom: 10px;
+    font-size: 15px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(0, 82%, 44%);
+}
+
+@media screen and (max-width: 999px) {
+
+    .container {
+        width: 300px;
+        height: 500px;
+        box-shadow: 0 20px 30px rgba(0, 0, 0, .3);
+        position: relative;
+        bottom: -30px;
+    }
+
+    .image {
+        width: 0%;
+        height: 0%;
+        overflow: visible;
+    }
+    
+    #woman {
+        position: relative;
+        top: -90px;
+        left: 50px;
+        width: 200px;
+        z-index: 1;
+    }
+
+    #image-bg-mobile {
+        display: block;
+        position: relative;
+        top: -155px;
+        left: 25px;
+    }
+    
+    #image-bg {
+        display: none;
+    }
+    
+    #box {
+        margin-top: -430px;
+        margin-right: 135px;
+        height: 80px;
+        filter: none;
+    }
+
+    .faq {
+        height: 100%;
+        width: 100%;
+        position: relative;
+        order: 2;
+    }
+
+    .faq h1 {
+        position: relative;
+        top: 0px;
+        left: 0;
+        font-size: 35px;
+        color: var(--Very-dark-desaturated-blue);
+    }
+    
+    .questions{
+        width: 100%;
+        padding: 0 15px;
+        position: relative;
+        left: 0px;
+        bottom: -40px;
+        font-size: 13px;
+    }
+    
+    .question-box {
+        width: 250px;
+        position: relative;
+        width: 100%;
+    }
+    
+    .arrow {
+        position: absolute;
+        right: 0;
+        top: 40%;
+    }
+
+    .attribution {
+        position: absolute;
+        bottom: 10px;
+        font-size: 13px;
+        text-align: center;
+    }
+    
+    .attribution a {
+        color: hsl(156, 100%, 50%);
+    }
+}
