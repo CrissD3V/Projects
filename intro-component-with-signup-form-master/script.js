@@ -23,8 +23,9 @@ function removeErrorState(e) {
 
     if (!fails) {
         form.style.height = '470px';
+        e.target.style.color = '#3e3c49';
     };
-}
+};
 
 // Detect errors on inputs before submit.
 form.addEventListener('submit', validateForm);
@@ -92,4 +93,5 @@ function generateErrorAlertOn(field, message = 'Error') {
         field.classList.add('error-border');
         field.style.background = 'url(./images/icon-error.svg) no-repeat right 12px';
         field.style.backgroundPosition = '430px';
+        field.style.color = '#ff7a7a';
 }
