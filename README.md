@@ -1,2 +1,2 @@
 # Proyectos
-Este es un repositorio destinado a almacenar todos los proyectos terminados que haya realizado.
+This is a repository with all of my projects, obviously.
