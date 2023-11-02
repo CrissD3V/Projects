@@ -7,14 +7,12 @@ This is a solution to the [Age calculator app challenge on Frontend Mentor](http
 - [Overview](#overview)
   - [The challenge](#the-challenge)
   - [Screenshot](#screenshot)
-  - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
 
 ## Overview
 
@@ -37,11 +35,6 @@ Users should be able to:
 
 ![Completed Project](./completed/Desktop%20Design.png)
 
-### Links
-
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
-
 ## My process
 
 ### Built with
@@ -63,9 +56,9 @@ I'm going to still learning the use of Date object on things like conditionals b
 
 ### Useful resources
 
-- [This AI give the base to make the age calculator](https://www.example.com) - This AI give the base to make the age calculator
+- [Pair Programmer](https://c.ai/c/qtEICpGfFS8f5Zr5kCHR1EsGsHlawNutYSZJq_IEZDY) - This AI give the base to make the age calculator.
 
-- [Calculator App](https://www.example.com) - This calculator was a really useful guide!
+- [CalcuOnline](https://calcuonline.com/calculadoras/calculadora-edad/#como-hacer-el-calculo-de-edad-exacta-a-mano) - This calculator was a really useful guide!
 
 ## Author
 
