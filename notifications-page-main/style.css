@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap');
+
+:root {
+
+  /* Primary colors */
+  --Red: hsl(1, 90%, 64%);
+  --Blue: hsl(219, 85%, 26%);
+
+  /* Neutral colors */
+  --Very-light-grayish-blue: hsl(210, 60%, 98%);
+  --Light-grayish-blue-1: hsl(211, 68%, 94%);
+  --Light-grayish-blue-2: hsl(205, 33%, 90%);
+  --Grayish-blue: hsl(219, 14%, 63%);
+  --Dark-grayish-blue: hsl(219, 12%, 42%);
+  --Very-dark-blue: hsl(224, 21%, 14%);
+}
+
+/* General styles */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+p {
+  font-size: 16px;
+  color: var(--Dark-grayish-blue);
+}
+/* General styles end */
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--Light-grayish-blue-2);
+}
+
+.main-container {
+  height: 830px;
+  width: 800px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  gap: 20px;
+  background-color: #fff;
+}
+
+/* Number of notifications and 'Mark all as read' */
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--Very-dark-blue);
+}
+
+.header span {
+  background-color: var(--Blue);
+  color: #fff;
+  font-size: 27px;
+  border-radius: 8px;
+  padding: 0px 15px;
+  margin-left: 10px;
+}
+
+.notifications-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Notifications section */
+.notification {
+  padding: 15px;
+  border-radius: 5px;
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  position: relative;
+}
+
+.unread {
+  background-color: rgba(10, 49, 122, 0.05);
+}
+
+.unread-advice {
+  position: relative;
+}
+
+.unread-advice::before {
+  content: "";
+  background-color: var(--Red);
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 6px;
+  margin-left: 10px;
+}
+
+/* Notification content */
+.photo {
+  height: 50px;
+}
+
+.noti-info {
+  line-height: 25px;
+  width: 100%;
+}
+
+.name {
+  font-weight: 800;
+  color: var(--Very-dark-blue);
+}
+
+.bold {
+  color: var(--Dark-grayish-blue);
+  font-weight: 800;
+}
+
+.date {
+  color: var(--Grayish-blue);
+}
+
+/* Rizky message */
+.message {
+  border: 2px solid var(--Light-grayish-blue-2);
+  margin-top: 10px;
+  padding: 10px 15px;
+}
+
+.message p {
+  font-size: 17px;
+}
+
+/* Kimberly comment */
+.notification:nth-of-type(5) {
+  justify-content: space-between;
+}
+
+.main-info {
+  display: flex;
+  gap: 20px;
+}
+
+.comment-photo {
+  height: 50px;
+  transition: .3s;
+}
+
+/* Special styles */
+*::selection {
+  background-color: rgba(0, 255, 98, 0.603);
+}
+
+.header p:hover {
+  cursor: pointer;
+  color: var(--Blue);
+}
+
+.name:hover,
+.bold:hover {
+  cursor: pointer;
+  color: var(--Blue);
+}
+
+.unread:hover {
+  cursor: pointer;
+  background-color: rgba(10, 49, 122, 0.162)
+}
+
+.message:hover {
+  cursor: pointer;
+  background-color: rgba(10, 49, 122, 0.08);
+}
+
+.comment-photo:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+@media screen and (max-width: 725px) {
+  p {
+    font-size: 13px;
+  }
+  /* General styles end */
+  
+  .main-container {
+    height: 140vh;
+    width: 100%;
+    border-radius: 0;
+    padding: 20px;
+  }
+  
+  /* Number of notifications and 'Mark all as read' */
+  .header h1 {
+    font-size: 20px;
+  }
+  
+  .header span {
+    font-size: 22px;
+  }
+
+  .header p {
+    font-size: 14px;
+  }
+
+  /* Notification content */
+  .noti-info {
+    line-height: 18px;
+  }
+
+  .unread-advice::before {
+    top: 4px;
+    margin-left: 5px;
+  }
+  
+  /* Rizky message */
+  .message {
+    line-height: 20px;
+  }
+  
+  .message p {
+    font-size: 13px;
+  }
+  
+  /* Kimberly comment */
+  
+  .comment-photo {
+    height: 30px;
+  }
+}
